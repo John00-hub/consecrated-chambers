@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consecrated Law Firm | Barristers, Solicitors & Notary Public — Jabi, Abuja</title>
+<meta name="description" content="Consecrated Law Firm is a premier full-service legal practice and Notary Public office at Global Plaza, Obafemi Awolowo Way, Jabi, Abuja — Corporate Law, Real Estate & Property Management, Litigation, Legislative Services & Notarisation.">
+<style>
+  :root {
+    --ink: #0B1210;
+    --obsidian: #0E1714;
+    --emerald-deep: #122620;
+    --ivory: #FAF8F3;
+    --parchment: #F2EEE4;
+    --brass: #B8924A;
+    --brass-light: #D4B26E;
+    --brass-soft: rgba(184, 146, 74, 0.14);
+    --slate: #4A5550;
+    --muted: #76827C;
+    --line: rgba(11, 18, 16, 0.11);
+    --line-dark: rgba(250, 248, 243, 0.12);
+    --serif: 'Georgia', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Top Bar */
+  .topbar {
+    background: var(--ink);
+    color: rgba(250,248,243,0.82);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding: 9px 24px;
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topbar span.dot { color: var(--brass-light); margin: 0 8px; }
+  .topbar a { color: var(--brass-light); text-decoration: none; font-weight: 600; }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: rgba(250, 248, 243, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .crest {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    background: var(--obsidian);
+    border: 1px solid var(--brass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brass-light);
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+  .brand-txt strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  .brand-txt small {
+    display: block;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--brass); }
+  .nav-cta {
+    background: var(--obsidian);
+    color: var(--ivory);
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--obsidian);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover {
+    background: var(--brass);
+    border-color: var(--brass);
+    color: var(--ink);
+  }
+
+  /* Hero */
+  .hero {
+    background: radial-gradient(circle at 82% 18%, rgba(184,146,74,0.16), transparent 45%),
+                linear-gradient(165deg, var(--ink) 0%, var(--emerald-deep) 100%);
+    color: var(--ivory);
+    padding: 88px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--brass-light);
+    margin-bottom: 22px;
+    font-weight: 600;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--brass-light);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--brass-light);
+  }
+  .hero-lead {
+    font-size: 17px;
+    color: rgba(250,248,243,0.82);
+    max-width: 590px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+  .hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 44px;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, var(--brass-light), var(--brass));
+    color: var(--ink);
+    text-decoration: none;
+    padding: 15px 26px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-outline {
+    background: rgba(250,248,243,0.05);
+    color: var(--ivory);
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(250,248,243,0.24);
+  }
+  .hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line-dark);
+    max-width: 560px;
+  }
+  .metric strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 28px;
+    color: var(--brass-light);
+    font-weight: 400;
+  }
+  .metric span {
+    font-size: 12px;
+    color: rgba(250,248,243,0.68);
+    letter-spacing: 0.04em;
+  }
+
+  /* Hero Chamber Card */
+  .chamber-card {
+    background: rgba(11, 18, 16, 0.72);
+    border: 1px solid rgba(212, 178, 110, 0.32);
+    border-radius: 8px;
+    padding: 32px;
+    backdrop-filter: blur(8px);
+  }
+  .chamber-card-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brass-light);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .chamber-card h3 {
+    font-family: var(--serif);
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+  .chamber-card p {
+    font-size: 13.5px;
+    color: rgba(250,248,243,0.75);
+    margin-bottom: 22px;
+    line-height: 1.65;
+  }
+  .quick-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .q-pill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 14px;
+    background: rgba(250,248,243,0.05);
+    border: 1px solid rgba(250,248,243,0.1);
+    border-radius: 5px;
+    font-size: 13px;
+    color: var(--ivory);
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .q-pill:hover { border-color: var(--brass-light); }
+  .q-pill span:last-child { color: var(--brass-light); font-weight: 700; }
+
+  /* Sections */
+  section { padding: 84px 24px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .sec-head {
+    max-width: 680px;
+    margin-bottom: 52px;
+  }
+  .sec-tag {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--brass);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .sec-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.6vw, 42px);
+    font-weight: 400;
+    line-height: 1.18;
+    margin-bottom: 16px;
+  }
+  .sec-head p { color: var(--slate); font-size: 16px; }
+
+  /* About Grid */
+  .about-strip {
+    background: var(--parchment);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .quote-box {
+    background: var(--ivory);
+    border-left: 3px solid var(--brass);
+    padding: 28px 30px;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 10px 30px rgba(11,18,16,0.04);
+  }
+  .quote-box blockquote {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+  .quote-box cite {
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  /* Practice Grid */
+  .practice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .p-card {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    padding: 32px 28px;
+    border-radius: 6px;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .p-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--brass);
+    box-shadow: 0 16px 36px rgba(11,18,16,0.06);
+  }
+  .p-num {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--brass);
+    margin-bottom: 16px;
+    display: block;
+    letter-spacing: 0.08em;
+  }
+  .p-card h3 {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .p-card p {
+    font-size: 14px;
+    color: var(--slate);
+    margin-bottom: 22px;
+    line-height: 1.65;
+  }
+  .p-link {
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .p-link:hover { color: var(--brass); }
+
+  /* Diaspora & Notary Highlight */
+  .notary-band {
+    background: var(--obsidian);
+    color: var(--ivory);
+  }
+  .notary-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .check-list {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    margin: 26px 0 32px;
+  }
+  .check-list li {
+    display: flex;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(250,248,243,0.86);
+  }
+  .check-list li strong { color: var(--brass-light); }
+  .notary-seal-box {
+    background: rgba(250,248,243,0.04);
+    border: 1px solid rgba(212,178,110,0.28);
+    border-radius: 8px;
+    padding: 36px;
+  }
+
+  /* Consultation Form + Office */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 48px;
+  }
+  .office-card {
+    background: var(--parchment);
+    padding: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+  }
+  .office-item { margin-bottom: 24px; }
+  .office-item small {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--brass);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .office-item p, .office-item a {
+    font-size: 15px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .form-card {
+    background: #FFFFFF;
+    padding: 38px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 34px rgba(11,18,16,0.05);
+  }
+  .f-row { margin-bottom: 16px; }
+  .f-row label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--slate);
+    margin-bottom: 6px;
+  }
+  .f-input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid rgba(11,18,16,0.18);
+    border-radius: 4px;
+    font-size: 14.5px;
+    font-family: var(--sans);
+    background: var(--ivory);
+  }
+  .f-input:focus { outline: none; border-color: var(--brass); background: #FFF; }
+  .disclaimer {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  footer {
+    background: var(--ink);
+    color: rgba(250,248,243,0.66);
+    padding: 44px 24px;
+    font-size: 13px;
+    border-top: 1px solid var(--line-dark);
+  }
+  .foot-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  @media (max-width: 920px) {
+    .hero-inner, .about-grid, .practice-grid, .notary-grid, .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .nav-links { display: none; }
+    .hero { padding: 56px 20px; }
+    section { padding: 60px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>JABI · ABUJA, FCT <span class="dot">•</span> SUITE A305, GLOBAL PLAZA, OBAFEMI AWOLOWO WAY</div>
+    <div>CHAMBERS DESK: <a href="tel:+2348036701230">+234 803 670 1230</a> <span class="dot">•</span> <a href="tel:+2348092165221">+234 809 216 5221</a></div>
+  </div>
+</div>
+
+<header>
+  <nav class="nav">
+    <a href="#" class="brand">
+      <div class="crest">CL</div>
+      <div class="brand-txt">
+        <strong>Consecrated Law Firm</strong>
+        <small>Barristers · Solicitors · Notary Public</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#firm">The Chambers</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#notary">Notary &amp; Property Desk</a></li>
+      <li><a href="#contact">Consultations</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book Consultation →</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Abuja · Federal Capital Territory</span>
+      <h1>Principled advocacy.<br><em>Decisive</em> legal clarity.</h1>
+      <p class="hero-lead">
+        <strong>Consecrated Law Firm</strong> is a full-service legal practice and Notary Public office in Jabi, Abuja — advising corporate institutions, property investors, public bodies, and private clients across Nigeria and the Diaspora.
+      </p>
+      <div class="hero-btns">
+        <a href="https://wa.me/2348036701230?text=Good%20day%20Consecrated%20Law%20Firm%2C%20I%20would%20like%20to%20schedule%20a%20legal%20consultation." class="btn-gold">Schedule via WhatsApp ↗</a>
+        <a href="tel:+2348036701230" class="btn-outline">Call Chambers: 0803 670 1230</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <strong>06</strong>
+          <span>Core Practice Desks</span>
+        </div>
+        <div class="metric">
+          <strong>Notary</strong>
+          <span>Certified Authentication</span>
+        </div>
+        <div class="metric">
+          <strong>FCT &amp; Federal</strong>
+          <span>Trial &amp; Appellate Practice</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chamber-card">
+      <span class="chamber-card-tag">Direct Client Intake</span>
+      <h3>Select a Legal Desk</h3>
+      <p>Initiate a confidential consultation or document verification directly with Counsel in Abuja.</p>
+      <div class="quick-pills">
+        <div class="q-pill" onclick="prefillMatter('Notary Public & Document Authentication')">
+          <span>01 · Notary Public &amp; Affidavits</span><span>→</span>
+        </div>
+        <div class="q-pill" onclick="prefillMatter('Abuja Property Due Diligence & Management')">
+          <span>02 · Property &amp; AGIS Due Diligence</span><span>→</span>
+        </div>
+        <div class="q-pill" onclick="prefillMatter('Corporate & Commercial Retainer')">
+          <span>03 · Corporate &amp; Commercial Advisory</span><span>→</span>
+        </div>
+        <div class="q-pill" onclick="prefillMatter('Civil / Commercial Litigation')">
+          <span>04 · Litigation &amp; Dispute Resolution</span><span>→</span>
+        </div>
+        <div class="q-pill" onclick="prefillMatter('Legislative Drafting & Policy Advisory')">
+          <span>05 · Legislative &amp; Regulatory Services</span><span>→</span>
+        </div>
+      </div>
+      <small style="color:rgba(250,248,243,0.58);font-size:12px;">Open Monday – Friday · 8:30 AM – 5:30 PM (WAT)</small>
+    </div>
+  </div>
+</section>
+
+<section id="firm" class="about-strip">
+  <div class="container about-grid">
+    <div>
+      <span class="sec-tag">The Firm</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(28px,3.4vw,40px);font-weight:400;line-height:1.2;margin-bottom:18px;">
+        Diligent preparation. Trusted representation in the Capital.
+      </h2>
+      <p style="color:var(--slate);margin-bottom:16px;">
+        Situated at Global Plaza along Obafemi Awolowo Way, Jabi, Abuja, <strong>Consecrated Law Firm</strong> combines seasoned courtroom advocacy with meticulous commercial, real estate, legislative, and notarial practice.
+      </p>
+      <p style="color:var(--slate);">
+        Whether verifying high-value Federal Capital Territory property titles for Diaspora buyers, structuring corporate transactions, notarising international instruments, or representing clients before Superior Courts of Record, every brief receives partner-led scrutiny and timely communication.
+      </p>
+    </div>
+    <div class="quote-box">
+      <blockquote>
+        “Sound legal protection begins long before a dispute arises — in the precision of every contract, the verification of every title, and the integrity of Counsel.”
+      </blockquote>
+      <cite>The Consecrated Chambers Standard · Abuja, FCT</cite>
+    </div>
+  </div>
+</section>
+
+<section id="practice">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">Areas of Practice</span>
+      <h2>Comprehensive legal capability across six core desks.</h2>
+      <p>Structured legal solutions for corporations, property owners, families, and Nigerians abroad.</p>
+    </div>
+
+    <div class="practice-grid">
+      <div class="p-card">
+        <div>
+          <span class="p-num">01 / NOTARIAL PRACTICE</span>
+          <h3>Notary Public Services</h3>
+          <p>Authentication and notarisation of local and international documents, embassy attestations, statutory declarations, powers of attorney, and certified true copies.</p>
+        </div>
+        <a href="#contact" onclick="prefillMatter('Notary Public Services')" class="p-link">Enquire with Notary →</a>
+      </div>
+
+      <div class="p-card">
+        <div>
+          <span class="p-num">02 / REAL ESTATE &amp; LAND</span>
+          <h3>Property Law &amp; Management</h3>
+          <p>Comprehensive AGIS &amp; land registry searches in Abuja, title perfection, deeds of assignment, commercial leases, tenancy administration, and portfolio management.</p>
+        </div>
+        <a href="#contact" onclick="prefillMatter('Property Due Diligence & Management')" class="p-link">Request Title Search →</a>
+      </div>
+
+      <div class="p-card">
+        <div>
+          <span class="p-num">03 / CORPORATE &amp; COMMERCIAL</span>
+          <h3>Corporate Practice</h3>
+          <p>CAC incorporations, post-incorporation filings, joint-venture &amp; shareholder agreements, regulatory compliance, company secretarial retainers, and commercial advisory.</p>
+        </div>
+        <a href="#contact" onclick="prefillMatter('Corporate & Commercial Law')" class="p-link">Consult Corporate Desk →</a>
+      </div>
+
+      <div class="p-card">
+        <div>
+          <span class="p-num">04 / DISPUTE RESOLUTION</span>
+          <h3>Litigation &amp; ADR</h3>
+          <p>Strategic representation in civil, commercial, real estate, and constitutional disputes before State High Courts, the Federal High Court, and Appellate Courts, alongside mediation.</p>
+        </div>
+        <a href="#contact" onclick="prefillMatter('Litigation & Dispute Resolution')" class="p-link">Discuss a Brief →</a>
+      </div>
+
+      <div class="p-card">
+        <div>
+          <span class="p-num">05 / PUBLIC &amp; STATUTORY</span>
+          <h3>Legislative Services</h3>
+          <p>Legislative drafting, bill analysis, policy frameworks, regulatory impact reviews, and institutional advisory for government agencies, committees, and NGOs.</p>
+        </div>
+        <a href="#contact" onclick="prefillMatter('Legislative & Policy Advisory')" class="p-link">Engage Counsel →</a>
+      </div>
+
+      <div class="p-card">
+        <div>
+          <span class="p-num">06 / DIASPORA DESK</span>
+          <h3>Diaspora Legal &amp; Property Desk</h3>
+          <p>Dedicated representation for Nigerians in the UK, USA, Canada, and Europe requiring independent Abuja land verification, probate/estate administration, or notarised instruments.</p>
+        </div>
+        <a href="#contact" onclick="prefillMatter('Diaspora Legal / Property Verification')" class="p-link">Book Video / WhatsApp Brief →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="notary" class="notary-band">
+  <div class="container notary-grid">
+    <div>
+      <span class="eyebrow">Abuja Property &amp; Notary Desk</span>
+      <h2 style="font-family:var(--serif);font-size:clamp(28px,3.5vw,40px);font-weight:400;line-height:1.2;margin-bottom:16px;">
+        Never commit funds to Abuja real estate or cross-border filings without independent verification.
+      </h2>
+      <ul class="check-list">
+        <li><span>✦</span><span><strong>Independent AGIS &amp; FCDA Verification:</strong> Confirm genuine Right of Occupancy / Certificate of Occupancy status and encumbrances before payment.</span></li>
+        <li><span>✦</span><span><strong>Same-Day Notarisation Appointments:</strong> Prompt statutory notarisation for embassies, foreign universities, banks, and international transactions.</span></li>
+        <li><span>✦</span><span><strong>End-to-End Property Management:</strong> Rent collection, vetted corporate tenant placement, lease enforcement, and asset protection in Abuja.</span></li>
+      </ul>
+      <a href="#contact" class="btn-gold">Request Verification or Notary Slot →</a>
+    </div>
+    <div class="notary-seal-box">
+      <span class="chamber-card-tag">Chambers Protocol</span>
+      <h3 style="font-family:var(--serif);font-size:24px;font-weight:400;margin-bottom:14px;">How Consultations Work</h3>
+      <p style="font-size:14px;color:rgba(250,248,243,0.78);margin-bottom:18px;">
+        <strong>Step 1 — Brief Summary:</strong> Submit your enquiry below or via our official WhatsApp Chambers desk.<br><br>
+        <strong>Step 2 — Conflict Check &amp; Scheduling:</strong> Chambers confirms conflict clearance and schedules an in-person Jabi office or virtual consultation.<br><br>
+        <strong>Step 3 — Engagement &amp; Execution:</strong> Clear scope of instruction, timeline, and written updates at every milestone.
+      </p>
+      <div style="padding-top:16px;border-top:1px solid var(--line-dark);font-size:13px;color:var(--brass-light);">
+        Suite A305, Global Plaza · Obafemi Awolowo Way, Jabi, Abuja
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="office-card">
+      <span class="sec-tag">Visit or Contact Chambers</span>
+      <h2 style="font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:24px;">Abuja Chambers</h2>
+
+      <div class="office-item">
+        <small>Chambers Address</small>
+        <p>Suite A305 (Upstairs), Global Plaza,<br>Plot 366, Obafemi Awolowo Way,<br>Jabi District, Abuja, FCT, Nigeria.</p>
+      </div>
+
+      <div class="office-item">
+        <small>Telephone &amp; WhatsApp Lines</small>
+        <p><a href="tel:+2348036701230">+234 803 670 1230</a><br><a href="tel:+2348092165221">+234 809 216 5221</a></p>
+      </div>
+
+      <div class="office-item">
+        <small>Consultation Hours</small>
+        <p>Monday – Friday: 8:30 AM – 5:30 PM<br>Weekend / Diaspora Virtual Slots: By Prior Appointment</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <span class="sec-tag">Confidential Intake</span>
+      <h3 style="font-family:var(--serif);font-size:26px;font-weight:400;margin-bottom:20px;">Request a Legal Consultation</h3>
+      <form onsubmit="sendToChambersWhatsApp(event)">
+        <div class="f-row">
+          <label>Full Name / Organization</label>
+          <input id="cName" class="f-input" required placeholder="e.g. Engr. Musa Adeyemi / Apex Holdings Ltd">
+        </div>
+        <div class="f-row">
+          <label>Phone / WhatsApp Number</label>
+          <input id="cPhone" class="f-input" required placeholder="e.g. +234 803 000 0000">
+        </div>
+        <div class="f-row">
+          <label>Practice Desk Required</label>
+          <select id="cService" class="f-input">
+            <option>Notary Public &amp; Document Authentication</option>
+            <option>Abuja Property Due Diligence &amp; Management</option>
+            <option>Corporate &amp; Commercial Practice</option>
+            <option>Litigation &amp; Dispute Resolution</option>
+            <option>Legislative &amp; Policy Services</option>
+            <option>Diaspora Legal Desk</option>
+          </select>
+        </div>
+        <div class="f-row">
+          <label>Brief Summary of Matter</label>
+          <textarea id="cNotes" rows="3" class="f-input" required placeholder="State briefly how Chambers may assist you..."></textarea>
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;">
+          Send Enquiry Straight to Chambers WhatsApp ↗
+        </button>
+        <p class="disclaimer">Please omit sensitive privileged documents in this initial message until Counsel confirms engagement.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>© 2026 <strong>Consecrated Law Firm</strong> · Barristers, Solicitors &amp; Notary Public. All rights reserved.</div>
+    <div>Suite A305, Global Plaza, Plot 366 Obafemi Awolowo Way, Jabi, Abuja</div>
+  </div>
+</footer>
+
+<script>
+function prefillMatter(serviceName) {
+  const sel = document.getElementById('cService');
+  for (let i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].text.includes(serviceName.split(' ')[0])) {
+      sel.selectedIndex = i;
+      break;
+    }
+  }
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => document.getElementById('cName').focus(), 450);
+}
+
+function sendToChambersWhatsApp(e) {
+  e.preventDefault();
+  const name = document.getElementById('cName').value.trim();
+  const phone = document.getElementById('cPhone').value.trim();
+  const service = document.getElementById('cService').value;
+  const notes = document.getElementById('cNotes').value.trim();
+  const msg = `Good day *Consecrated Law Firm*,\n\nI would like to schedule a consultation via your Chambers Portal:\n• *Name:* ${name}\n• *Phone:* ${phone}\n• *Practice Desk:* ${service}\n• *Brief Summary:* ${notes}`;
+  window.open(`https://wa.me/2348036701230?text=${encodeURIComponent(msg)}`, '_blank');
+}
+</script>
+</body>
+</html>
